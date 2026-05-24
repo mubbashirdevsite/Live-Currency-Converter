@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="converter-card">
+            <h1 class="title">Currency Converter</h1>
+            <p class="subtitle">Convert currencies with real-time exchange rates</p>
+            
+            <div class="top-bar">
+                <div class="theme-toggle">
+                    <label for="themeToggle">Dark Mode</label>
+                    <label class="switch">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="live-status online" id="onlineStatus">Online</div>
+            </div>
+
+            <div class="converter-section">
+                <div class="input-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" placeholder="Enter amount" value="1" min="0">
+                </div>
+
+                <div class="currency-group">
+                    <div class="select-container">
+                        <label for="fromCurrency">From</label>
+                        <select id="fromCurrency">
+                            <option value="USD">USD - United States Dollar</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="AUD">AUD - Australian Dollar</option>
+                            <option value="CHF">CHF - Swiss Franc</option>
+                            <option value="CNY">CNY - Chinese Yuan</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                            <option value="PKR">PKR - Pakistani Rupee</option>
+                            <option value="IRR">IRR - Iranian Rial</option>
+                            <option value="SAR">SAR - Saudi Riyal</option>
+                            <option value="MXN">MXN - Mexican Peso</option>
+                            <option value="BRL">BRL - Brazilian Real</option>
+                            <option value="ZAR">ZAR - South African Rand</option>
+                        </select>
+                    </div>
+
+                    <button id="swapBtn" class="swap-btn" title="Swap currencies">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <polyline points="19 12 12 19 5 12"></polyline>
+                            <polyline points="5 12 12 5 19 12"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="select-container">
+                        <label for="toCurrency">To</label>
+                        <select id="toCurrency">
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="USD">USD - United States Dollar</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="AUD">AUD - Australian Dollar</option>
+                            <option value="CHF">CHF - Swiss Franc</option>
+                            <option value="CNY">CNY - Chinese Yuan</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                            <option value="PKR">PKR - Pakistani Rupee</option>
+                            <option value="IRR">IRR - Iranian Rial</option>
+                            <option value="SAR">SAR - Saudi Riyal</option>
+                            <option value="MXN">MXN - Mexican Peso</option>
+                            <option value="BRL">BRL - Brazilian Real</option>
+                            <option value="ZAR">ZAR - South African Rand</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="result-section">
+                    <div class="conversion-meta">
+                        <span class="last-updated" id="lastUpdated">Updated just now</span>
+                    </div>
+                    <div class="result-box">
+                        <span class="result-label">Converted Amount</span>
+                        <p class="result-value" id="result">0.00</p>
+                        <span class="exchange-rate" id="exchangeRate">Loading...</span>
+                    </div>
+                </div>
+
+                <div class="actions-row">
+                    <button id="convertBtn" class="convert-btn" type="button">Convert</button>
+                    <button id="copyResultBtn" class="copy-btn" type="button">Copy</button>
+                </div>
+
+                <div class="error-message" id="errorMsg"></div>
+                
+                <div class="loading-spinner" id="loadingSpinner" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Fetching exchange rates...</p>
+                </div>
+            </div>
+
+            <div class="recent-conversions">
+                <div class="recent-header">
+                    <h3>Recent Conversions</h3>
+                    <button id="clearHistoryBtn" class="clear-history-btn" type="button">Clear</button>
+                </div>
+                <ul id="recentList" class="recent-list">
+                    <li>No conversions yet</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

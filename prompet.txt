@@ -1,0 +1,10 @@
+Build a responsive Currency Converter using HTML, CSS, JavaScript, jQuery, and AJAX.
+
+Features:
+- Convert currencies live
+- Dropdown for currency selection
+- Real-time exchange rates API
+- Swap currencies button
+- Modern UI with gradient design
+- Responsive layout
+- Use jQuery AJAX requests
