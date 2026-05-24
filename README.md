@@ -110,5 +110,5 @@ This project is open source and free to use.
 M Mubbashir Idrees  
 Frontend & WordPress Developer
 
-GitHub: https://github.com/mbmirza
+GitHub: https://github.com/mubbashirdevsite
 ```
